@@ -4,25 +4,36 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Calculator</h2>
+<h2>Simple Calculator</h2>
 <br />
 
 <label for="num1">Num 1:</label>
-<input id="num1" type = "text" />
+<input id="num1" type = "number" />
 <br />
 
 <label for="num2">Num 2:</label>
-<input id="num2" type="text" />
+<input id="num2" type="number" />
 <br />
 
 <label for="answer">Answer:</label>
-<input id="answer" type="text" />
+<input id="answer" type="number" />
 <br /><br />
 
 <input type="button" id="add" value="Add"/>
 <input type="button" id="subtract" value="Subtract" />
 <input type="button" id="multiply" value="Multiply" />
 <input type="button" id="divide" value="Divide"/>
+<br /><br />
+
+<h2>Improved Calculator</h2>
+<br />
+
+<label for="expr">Expression</label>
+<input type="text" id="expr" />
+<br /><br />
+
+<input type="button" id="getAnswer" value="Get Answer" />
+<!-- TODO: Validate Expression, Evaluate Expression-->
 
 <script type="text/javascript">
     $("#add").click(function () {
@@ -65,5 +76,4 @@
             error: function (xhr, ajaxOptions, thrownError) { console.log(xhr.responseText); }
         });
     });
-
 </script>
